@@ -8,7 +8,7 @@ TEST(Kazhaeva_Anastasia_ComplexNumberTest1, add) {
   ComplexNumber c1(5, 4);
   ComplexNumber c2(6, 2);
   ComplexNumber res(11.0, 6.0);
-  ComplexNumber res2= c1+c2;
+  ComplexNumber res2 = c1 + c2;
 
   EXPECT_EQ(res.getRe(), res2.getRe());
   EXPECT_EQ(res.getIm(), res2.getIm());
@@ -25,7 +25,6 @@ TEST(Kazhaeva_Anastasia_ComplexNumberTest2, multiplication) {
 }
 
 TEST(Kazhaeva_Anastasia_ComplexNumberTest3, subtraction) {
-  
   double re1 = 2346.5778;
   double re2 = -534634.8765;
   double im1 = 4235.4578;
