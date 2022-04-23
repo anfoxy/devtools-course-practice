@@ -15,7 +15,7 @@ ASSERT_NO_THROW(ComplexNumber(1, 2));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number, Creating_a_complex_number_zero_im) {
-ASSERT_NO_THROW(ComplexNumber(1, 0));
+ASSERT_NO_THROW(ComplexNumber(2, 0));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number, Creating_a_complex_number_zero_re) {
