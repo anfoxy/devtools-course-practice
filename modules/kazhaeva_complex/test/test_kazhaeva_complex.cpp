@@ -28,13 +28,11 @@ ASSERT_NO_THROW(ComplexNumber(-1.324, 2.235));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number, Creating_a_complex_number_copy) {
-ComplexNumber c = ComplexNumber(1, 2);
-ASSERT_NO_THROW(ComplexNumber(c));
+ASSERT_NO_THROW(ComplexNumber(ComplexNumber(1, 2)));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number, Creating_a_complex_number_copy_test2) {
-ComplexNumber c = ComplexNumber(-24.1, 2);
-ASSERT_NO_THROW(ComplexNumber(c));
+ASSERT_NO_THROW(ComplexNumber(ComplexNumber(-24.1, 2)));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number,
