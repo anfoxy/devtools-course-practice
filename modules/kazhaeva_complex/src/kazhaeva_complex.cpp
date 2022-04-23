@@ -5,6 +5,8 @@
 #include <stdbool.h>
 #include <string>
 #include <limits>
+#include <cmath> // NOLINT
+
 
 const double eps = std::numeric_limits<double>::epsilon();
 
@@ -101,8 +103,8 @@ bool ComplexNumber::operator != (const ComplexNumber& z) const {
 }
 
 double ComplexNumber::magnitude() const {
-    double powReal = pow(getRe(), 2);
-    double powImag = pow(getIm(), 2);
+    double powReal = getRe() * getRe();
+    double powImag = getIm() * getIm();
     return sqrt(powReal + powImag);
 }
 
