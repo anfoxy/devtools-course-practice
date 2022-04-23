@@ -36,8 +36,8 @@ ASSERT_NO_THROW(ComplexNumber(ComplexNumber(-24.1, 2)));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number, Creating_a_complex_number_copy_test3) {
-	ComplexNumber c1(-24.1, 2);
-	ASSERT_NO_THROW(ComplexNumber c2(c1));
+ComplexNumber c1(-24.1, 2);
+ASSERT_NO_THROW(ComplexNumber c2(c1));
 }
 
 TEST(Kazhaeva_Anastasia_complex_number,
