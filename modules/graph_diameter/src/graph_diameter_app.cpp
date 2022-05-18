@@ -9,7 +9,6 @@
 
 
 #include "include/graph_diameter.h"
-#include <iostream>
 
 
 void GraphApplication::help(const char* appname, const char* mes) {
@@ -20,22 +19,20 @@ void GraphApplication::help(const char* appname, const char* mes) {
         "  $ " + appname + " <vector> <vector> ... <vector>\n\n" +
         "Where all the components of the matrix are vectors\n\n" +
         "and all vector  components are int numbers, separated by commas\n";
-  
 }
 
 bool GraphApplication::validateNumberOfArguments(int argc, const char** argv) {
     if (argc == 1) {
         help(argv[0]);
         return false;
-    }
-    else if (argc < 2) {
+    } else if (argc < 2) {
         help(argv[0], "ERROR: Should be 1 arguments!\n\n");
         return false;
     }
     return true;
 }
 
-std::vector<std::vector<int>> parseVector(int argc,const char** arg) {
+std::vector<std::vector<int>> parseVector(int argc, const char** arg) {
     const size_t length = argc;
     std::string strI = "";
     std::vector<std::vector<int>> vec;
@@ -48,7 +45,6 @@ std::vector<std::vector<int>> parseVector(int argc,const char** arg) {
         vec.push_back(t);
         ind++;
         for (unsigned int i = 0; i < strVec.size(); i++) {
-
             if (strVec[i] == ',') {
                 if (strI == "") {
                     throw std::string("Wrong vector format!");
@@ -59,8 +55,7 @@ std::vector<std::vector<int>> parseVector(int argc,const char** arg) {
                 }
                 vec[ind].push_back(num);
                 strI = "";
-            }
-            else {
+            } else {
                 strI += strVec[i];
             }
         }
@@ -88,7 +83,7 @@ std::string GraphApplication::operator()(int argc, const char** argv) {
         return message;
     }
     try {
-        args.matrix = parseVector(argc,argv);
+        args.matrix = parseVector(argc, argv);
     }
     catch (std::string& str) {
         return str;
