@@ -33,13 +33,12 @@ bool GraphApplication::validateNumberOfArguments(int argc, const char** argv) {
 }
 
 std::vector<std::vector<int>> parseVector(int argc, const char** arg) {
-    const size_t length = argc;
     std::string strI = "";
     std::vector<std::vector<int>> vec;
     char* end;
     int num;
     int ind = -1;
-    for (int i = 1; i < length; i++) {
+    for (int i = 1; i < argc; i++) {
         std::string  strVec = arg[i];
         std::vector<int > t;
         vec.push_back(t);
